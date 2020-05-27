@@ -19,6 +19,8 @@ module Anvil
 
     def load_base_url_for(environment)
       case environment
+      when 'on_premise'
+        @base_url = 'https://localhost'
       when 'localhost'
         @base_url = 'http://localhost:3000'
       when 'production'
